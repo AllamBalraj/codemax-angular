@@ -1,0 +1,22 @@
+<div class="bd-example">
+  <p class="h4">Add Model</p>
+</div>
+<figure class="bd-content">
+  <div class="col-md-6 offset-md-3">
+    <form [formGroup]="modelForm" (ngSubmit)="onSubmit()">
+      <div class="form-row">
+        <div class="col-md-9 mb-3">
+          <input type="text" class="form-control" formControlName="model_name" placeholder="Model name" required>
+        </div>
+        <div class="col-md-3 mb-3">
+          <select class="custom-select" formControlName="manufacturer_id">
+            <option *ngFor="let name of manufacturers_name" value={{name.id}}>
+              {{name.name}}
+            </option>
+          </select>
+        </div>
+      </div>
+      <button class="btn btn-primary" type="submit" [disabled]="modelForm.invalid">Submit</button>
+    </form>
+  </div>
+</figure>

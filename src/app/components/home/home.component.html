@@ -1,0 +1,27 @@
+<div class="bd-example">
+  <p class="h4">Inventory</p>
+</div>
+<figure class="bd-content">
+  <table class="table table-striped table-bordered">
+    <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Manufacturer</th>
+      <th scope="col">Model</th>
+      <th scope="col">Count</th>
+      <th scope="col">Action</th>
+    </tr>
+    </thead>
+    <tbody class="table-striped">
+    <tr *ngFor="let name of inventory; let i=index">
+      <th scope="row">{{i+1}}</th>
+      <td>{{name.manufacturer_name}}</td>
+      <td>{{name.models_name}}</td>
+      <td>{{name.count}}</td>
+      <td>
+        <button type="button" class="btn btn-primary" (click)="soldModel(name)">Sold</button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</figure>

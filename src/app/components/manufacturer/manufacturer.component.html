@@ -1,0 +1,17 @@
+<div class="bd-example">
+  <p class="h4">Add Manufacturer</p>
+</div>
+<figure class="bd-content">
+  <div class="col-md-6 offset-md-3">
+    <form [formGroup]="manufacturerForm" (ngSubmit)="onSubmit()">
+      <div class="form-row align-items-center">
+        <div class="col-auto col-md-9">
+          <input type="text" class="form-control mb-2" formControlName="manufacturer_name" placeholder="Manufacturer Name">
+        </div>
+        <div class="col-auto">
+          <button type="submit" class="btn btn-primary mb-2" [disabled]="manufacturerForm.invalid">Submit</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</figure>
